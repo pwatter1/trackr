@@ -1,4 +1,6 @@
-# Binghamton CS 445 SWE Active Status for Fall 2017. Trackr is a lightweight running application built on Ruby Rails.
+# Binghamton CS 445 SWE Active Status for Fall 2017. 
+
+## Trackr is a lightweight running application built on Ruby Rails.
 
 ## Owners: Ahnaf Raihan, Margie Lehmann, Patrick Watters, Thomas Moshier
 ## Requester: Rose Williams
