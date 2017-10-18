@@ -2,10 +2,10 @@
 
 ## Trackr is a lightweight running application built on Ruby Rails.
 
-## Owners: Ahnaf Raihan, Margie Lehmann, Patrick Watters, Thomas Moshier
-## Requester: Rose Williams
+### Owners: Ahnaf Raihan, Margie Lehmann, Patrick Watters, Thomas Moshier
+### Requester: Rose Williams
 
-## Pitch
+### Pitch
 Nobody wants obstacles in their way when they go on a run. So why not have an app to match?
 Trackr is a running application that goes beyond the basic functionalities of a running log. 
 Trackr gives you a simple, easy-to-use interface so there's no more mud on your shoes*. 
