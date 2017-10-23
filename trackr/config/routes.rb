@@ -3,8 +3,8 @@
   # See how all your routes lay out with "rake routes".
 
 Rails.application.routes.draw do  
-  get "/pages/:page" => "pages#show"
-  root "pages#show", page: "home"
+  #get "/pages/:page" => "pages#show"
+  root "pages#index" #, page: "index"
 end
 
   # You can have the root of your site routed with "root"
