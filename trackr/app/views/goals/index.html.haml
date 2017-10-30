@@ -1,0 +1,13 @@
+// Weekly Goals dashboard index.haml
+
+%html{lang: "en"}
+    %head
+        = stylesheet_link_tag 'application'
+        
+    %body 
+        %h2 Welcome User! Your weekly goal is #{@goals.goal} miles.
+        
+        = link_to "Edit Weekly Goal", new_goal_path  
+        // should change path in future
+        = link_to "Edit Weekly Goal", edit_goal_path
+        // = link_to "Delete Weekly Goal", delete_goal_path
