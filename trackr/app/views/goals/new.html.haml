@@ -1,6 +1,6 @@
 %h1 Create New Goal
 
-= form_tag goals_path(@goals), :method => :put do
+= form_tag goals_path(@goals), :method => :post do
   = label :goal, :goal, 'Goal'
   = text_field :goal, :goal
 

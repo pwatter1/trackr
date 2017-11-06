@@ -1,8 +1,10 @@
 %h2 Edit Goal
 
-= form_tag goals_path(@goals), :method => :put do
 
-  = label :goal, :goal, 'Title'
-  = text_field :goal, 'title'
+= form_tag goal_path(@goals), :method => :put do
 
-  = submit_tag 'Save Changes'
+  = label :goal, :goal, 'Goal'
+  = text_field :goal, 'goal'
+
+  = submit_tag 'Update Weekly Goal'
+  
