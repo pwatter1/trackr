@@ -7,7 +7,7 @@ class GoalsController < ApplicationController
     end
     
     # list all goals
-    def index 
+    def index
         @goals = Goal.find(1)
     end
     
@@ -26,14 +26,13 @@ class GoalsController < ApplicationController
     def update
         @goals = Goal.find(1)
         @goals.update_attributes!(goal_params)
-        # @goals = Goal.find(1)
-        # @goals.goal = params[:goal]
-        # @goals.save!   
         #flash[:notice] = "#{@goal.id} was successfully updated."
         redirect_to goals_path(@goals)
     end
 
     def destroy
-        #not needed
+        @goals = Goal.find(1)  
+        #@goals.goal = 0
+        #@goals.save! 
     end
 end
