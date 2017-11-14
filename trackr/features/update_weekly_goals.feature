@@ -6,16 +6,23 @@ Feature: update weekly goals
 Background: goal has been added to data base
 
   Given the following goals exist:
-  | goal                   |
-  | 200                    |
-  | 100                    |
+  | goal                  |
+  | 20                    |
     
-Scenario: update a weekly goal
+Scenario: enter and int to update a weekly goal
     Given I am on the dashboard page
-    #And the user has set the weekly goals
-    #Then I should be able to update the weekly goals
+    Then I should see "Your weekly goal is 20 miles."
+    When I follow "Edit Weekly Goal"
+    Then I should be on the Edit Goal Page
+    And  I fill in "Goal" with "30"
+    And  I press "Update Weekly Goal"
+    Then I should see "Your weekly goal is 30 miles."
     
-# Scenario: update when no goal has been created
-#     Given I am on the dashboard page
-#     And the user has not set the weekly goals
-#     Then I should not be able to change the weekly goals 
+Scenario: enter a non int to update a weekly goal
+    Given I am on the dashboard page
+    Then I should see "Your weekly goal is 20 miles."
+    When I follow "Edit Weekly Goal"
+    Then I should be on the Edit Goal Page
+    And  I fill in "Goal" with "hi"
+    And  I press "Update Weekly Goal"
+    Then I should see "Your weekly goal is 0 miles."

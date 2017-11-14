@@ -19,6 +19,9 @@ module NavigationHelpers
     when /^the dashboard\s?page$/
       goals_path
       
+    when /^the Edit Goal Page$/
+      edit_goal_path(1)
+      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

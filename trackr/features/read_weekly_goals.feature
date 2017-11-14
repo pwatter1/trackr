@@ -6,16 +6,9 @@ Feature: read weekly goals
 Background: goal has been added to data base
 
   Given the following goals exist:
-  | goal                   |
-  | 200                    |
-  | 100                    |
+  | goal                  |
+  | 20                    |
     
 Scenario: read weekly goals
     Given I am on the dashboard page
-    Then I should see their goal 
-    
-    
-#Scenario: read weekly goals that arent created
- #   Given I am on the dashboard page
-  #  And the user has not set weekly goals
-   # Then I should see a blank dashboard????
+    Then I should see "Your weekly goal is 20 miles."

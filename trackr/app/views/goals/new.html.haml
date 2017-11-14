@@ -1,7 +1,4 @@
-%h1 Create New Goal
+%h1 Reset Weekly Goal
 
 = form_tag goals_path(@goals), :method => :post do
-  = label :goal, :goal, 'Goal'
-  = text_field :goal, :goal
-
-  = submit_tag 'Save Changes'
+  = submit_tag 'Reset Goal'

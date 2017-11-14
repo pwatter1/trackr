@@ -1,12 +1,7 @@
-
 Given /the following goals exist/ do |goal_table|
   goal_table.hashes.each do |goal|
     Goal.create!(goal)
   end
-end
-
-Then("I should see their goal") do
-    expect(page).to have_content("weekly goal") 
 end
 
 

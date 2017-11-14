@@ -1,7 +1,7 @@
-# Feature: create weekly goals
-#     As a user,
-#     So that I can see my running goals,
-#     I want to be able to see my weekly mileage goal on my dashboard
+Feature: create weekly goals
+    As a user,
+    So that I can see my running goals,
+    I want to be able to see my weekly mileage goal on my dashboard
     
 # Scenario: create weekly goal that is created
 #     Given I am on the dashboard page
