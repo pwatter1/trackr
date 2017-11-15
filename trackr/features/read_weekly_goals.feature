@@ -7,8 +7,8 @@ Background: goal has been added to data base
 
   Given the following goals exist:
   | goal                  |
-  | 20                    |
+  | 0                     |
     
 Scenario: read weekly goals
     Given I am on the dashboard page
-    Then I should see "Your weekly goal is 20 miles."
+    Then I should see "Your weekly goal is 0 miles."
