@@ -5,7 +5,7 @@ class GoalsController < ApplicationController
     end
     
     def index
-        @goals = Goal.find(1)
+        #@goals = Goal.find(session[:uid])
     end
     
     def edit
