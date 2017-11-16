@@ -5,9 +5,8 @@
         = stylesheet_link_tag 'application'
         
     %body 
-        %h2 Welcome User! 
+        %h2 Welcome #{@current_user}! 
         %p Your weekly goal is #{@goals.goal} miles.
-        //%p Your current weekly total is 0 miles.
         
         = link_to "Edit Weekly Goal", edit_goal_path(@goals)
         = link_to "Reset Weekly Goal", new_goal_path  

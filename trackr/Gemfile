@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.3.4'
+ruby '2.3.0'
 gem 'rails', '4.2.6'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -29,11 +29,12 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 
-  #gem 'therubyracer', '~> 0.12.0'
 gem 'sass-rails', '~> 5.0.3'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '>= 2.7.1'
-
+#gems for omniauth fb login
+gem 'omniauth'
+gem 'omniauth-facebook'
 gem 'jquery-rails'
 gem 'haml'
 gem 'protected_attributes'
@@ -45,5 +46,3 @@ gem 'turbolinks'
 
 # Deploy with Capistrano
 # gem 'capistrano'
-
-

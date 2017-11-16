@@ -8,10 +8,6 @@ class GoalsController < ApplicationController
         @goals = Goal.find(1)
     end
     
-    def create
-        redirect_to goals_path # redirect to index
-    end
-    
     def edit
         @goals = Goal.find(1)
     end
@@ -24,13 +20,14 @@ class GoalsController < ApplicationController
     def new
         @goals = Goal.find(1)
         @goals.goal = 0
-        @goals.save! 
+        @goals.save!  
+        flash[:notice] = "#{@goals} was set back to 0."
     end
 
     def update
         @goals = Goal.find(1)
         @goals.update_attributes!(goal_params)
-        flash[:notice] = "#{@goal} was successfully updated."
+        flash[:notice] = "#{@goals} was successfully updated."
         redirect_to goals_path(@goals)
     end
 end
