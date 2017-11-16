@@ -3,16 +3,19 @@
         = stylesheet_link_tag 'application'
         
     %body 
-        %h2 Welcome to trackr
-        %p Nobody wants obstacles in their way when they go on a run. So why not have an app to match? 
-        %p Trackr is a running application that goes beyond the basic functionalities of a running log. 
-        %p Trackr gives you a simple, easy-to-use interface so there's no more mud on your shoes*. 
-        %p We make tracking runs a breeze so you can focus on hitting your goals. 
-        %p Speaking of goals, to keep users motivated, Trackr allows users to set goals and track their progress along the way! 
-        %p So get up, grab your running shoes, and let Trackr help you hit your stride. 
-        %p * This mud is metaphorical. We cannot guarantee that your shoes will actually be mud free.
-        
-        %button{:type => 'button', :id => 'login'} Login
-        %button{:type => 'button', :id => 'register'} Register
-        = link_to "Log in", login_path
-        //<li><%= link_to 'Facebook', '/auth/facebook' %></li>
+        - if @current_user
+            %p.welcome Welcome, #{current_user.name}!
+        - else
+            %h2 Welcome to trackr
+            %p Nobody wants obstacles in their way when they go on a run. So why not have an app to match? 
+            %p Trackr is a running application that goes beyond the basic functionalities of a running log. 
+            %p Trackr gives you a simple, easy-to-use interface so there's no more mud on your shoes*. 
+            %p We make tracking runs a breeze so you can focus on hitting your goals. 
+            %p Speaking of goals, to keep users motivated, Trackr allows users to set goals and track their progress along the way! 
+            %p So get up, grab your running shoes, and let Trackr help you hit your stride. 
+            %p * This mud is metaphorical. We cannot guarantee that your shoes will actually be mud free.
+            
+            %button{:type => 'button', :id => 'login'} Login
+            %button{:type => 'button', :id => 'register'} Register
+            = link_to "Log in", login_path
+            //<li><%= link_to 'Facebook', '/auth/facebook' %></li>

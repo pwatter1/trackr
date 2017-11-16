@@ -7,8 +7,8 @@ class SessionsController < ApplicationController
         # user = Trackruser.where(:provider => auth["provider"], :uid => auth["uid"]) || Trackruser.create_with_omniauth(auth)
         user = Trackruser.from_omniauth(env["omniauth.auth"])
         
-        session[:uid] = user.uid
-        #redirect_to goals_path #PATHHHHHH
+        session[:user_id] = user.id
+        redirect_to goals_path #root_url #PATHHHHHH
     end
     
     def destroy

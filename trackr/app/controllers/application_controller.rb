@@ -6,9 +6,8 @@ class ApplicationController < ActionController::Base
   
   def current_user 
       @current_user ||= Trackruser.find(session[:user_id]) if session[:user_id]   
-      redirect_to login_path and return unless @current_user
+      #@current_user ||= Trackruser.find_by(id: session[:user_id])
   end
   
   helper_method :current_user
-
 end
