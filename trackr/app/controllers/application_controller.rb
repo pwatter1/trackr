@@ -5,9 +5,16 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   def current_user 
-      @current_user ||= Trackruser.find(session[:user_id]) if session[:user_id]   
+      @current_user ||= Trackruser.find(session[:user_id]) if session[:user_id]
       #@current_user ||= Trackruser.find_by(id: session[:user_id])
+  end
+  
+  def authenticate_user!
+    if !current_user
+      redirect_to root_url, :notice => 'if you want to add a notice'
+    end
   end
   
   helper_method :current_user
 end
+

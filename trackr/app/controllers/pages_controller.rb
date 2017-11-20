@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
     def index
-        #render template: "pages/#{params[:page]}"
+        if @current_user
+            redirect_to goals_path
+        end
     end
 end

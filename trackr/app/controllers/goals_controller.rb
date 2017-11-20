@@ -1,11 +1,12 @@
 class GoalsController < ApplicationController
-
+    before_filter :authenticate_user!
+    
     def goal_params
         params.require(:goal).permit(:goal)
     end
     
     def index
-        #@goals = Goal.find(session[:uid])
+        @goals = Goal.find(1)
     end
     
     def edit
@@ -28,6 +29,6 @@ class GoalsController < ApplicationController
         @goals = Goal.find(1)
         @goals.update_attributes!(goal_params)
         flash[:notice] = "#{@goals} was successfully updated."
-        redirect_to goals_path(@goals)
+        redirect_to goals_path
     end
 end

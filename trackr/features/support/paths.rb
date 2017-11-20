@@ -17,7 +17,7 @@ module NavigationHelpers
       '/'
 
     when /^the dashboard\s?page$/
-      goals_path
+      goal_path
       
     when /^the Edit Goal Page$/
       edit_goal_path(1)
