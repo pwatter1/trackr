@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   
   def authenticate_user!
     if !current_user
-      redirect_to root_url, :notice => 'if you want to add a notice'
+      redirect_to root_url, :notice => 'not logged in'
     end
   end
   

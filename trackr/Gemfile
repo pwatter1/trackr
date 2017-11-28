@@ -32,17 +32,9 @@ end
 gem 'sass-rails', '~> 5.0.3'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'uglifier', '>= 2.7.1'
-#gems for omniauth fb login
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'jquery-rails'
 gem 'haml'
 gem 'protected_attributes'
-
 gem 'turbolinks'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'

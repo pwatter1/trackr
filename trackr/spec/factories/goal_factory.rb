@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :goal do
-    goal 150
+    goal 0
   end
 end

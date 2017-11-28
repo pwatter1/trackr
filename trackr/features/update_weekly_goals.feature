@@ -10,7 +10,7 @@ Background: goal has been added to data base
   | 0                     |
     
 Scenario: enter and int to update a weekly goal
-    Given I am on the dashboard page
+    Given I visit the dashboard
     Then I should see "Your weekly goal is 0 miles."
     When I follow "Edit Weekly Goal"
     Then I should be on the Edit Goal Page
@@ -19,7 +19,7 @@ Scenario: enter and int to update a weekly goal
     Then I should see "Your weekly goal is 30 miles."
     
 Scenario: enter a non int to update a weekly goal
-    Given I am on the dashboard page
+    Given I visit the dashboard
     Then I should see "Your weekly goal is 0 miles."
     When I follow "Edit Weekly Goal"
     Then I should be on the Edit Goal Page
