@@ -8,8 +8,7 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
  
-  OmniAuth.config.test_mode = true
-  OmniAuth.config.mock_auth[:facebook] = { 'provider' => 'facebook',
+  OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new({ 'provider' => 'facebook',
                     'uid' => '12345',
                     'info' => {
                         'name' => 'mockuser',
@@ -18,7 +17,7 @@ require 'rspec/autorun'
                       'token' => 'mock_token',
                       'secret' => 'mock_secret'
                     }
-                  }
+                  })
  
  
 # Requires supporting ruby files with custom matchers and macros, etc,
@@ -33,6 +32,7 @@ require 'rspec/autorun'
  
     # Add Factory Girl
     config.include FactoryGirl::Syntax::Methods
+
  
     # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
     config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -54,3 +54,4 @@ require 'rspec/autorun'
     config.order = "random"
  
 end
+OmniAuth.config.test_mode = true

@@ -36,9 +36,8 @@ Rails.application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
-  
-  OmniAuth.config.test_mode = true
-  OmniAuth.config.mock_auth[:facebook] = { 'provider' => 'facebook',
+
+  OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new({ 'provider' => 'facebook',
                     'uid' => '12345',
                     'info' => {
                         'name' => 'mockuser',
@@ -47,8 +46,10 @@ Rails.application.configure do
                       'token' => 'mock_token',
                       'secret' => 'mock_secret'
                     }
-                  }
+                  })
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
+
+OmniAuth.config.test_mode = true

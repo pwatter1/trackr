@@ -7,6 +7,5 @@ Feature: display a main homepage
 Scenario: view home page
   Given I am on the homepage
   Then I should see the welcome message
-  Then I should see the login button
-  Then I should see the logout button
+  Then I should see "Login"
   

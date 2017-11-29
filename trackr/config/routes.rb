@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root "pages#index" 
   
   get "goal", to: "goals#index"
-  get 'auth/:provider/callback' => 'sessions#create'
+  get 'auth/facebook/callback' => 'sessions#create'
   post 'logout' => 'sessions#destroy'
   get 'auth/failure' => 'sessions#failure'
   get 'auth/facebook', :as => 'login'
