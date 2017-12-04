@@ -11,6 +11,7 @@ describe "GET '/auth/facebook/callback'", :type => :request do
 
   it "should set user_id" do
     expect(session[:user_id]).to eq(Trackruser.last.id)
+    #byebug
   end
 
   it "should redirect to goals dashboard" do

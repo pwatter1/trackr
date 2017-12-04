@@ -15,7 +15,8 @@ require 'rspec/autorun'
                     },
                     'credentials' => {
                       'token' => 'mock_token',
-                      'secret' => 'mock_secret'
+                      'secret' => 'mock_secret',
+                      'expires_at' => 'Time.now + 1.week'
                     }
                   })
  

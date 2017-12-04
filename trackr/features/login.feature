@@ -3,26 +3,25 @@ Feature: User login
     so that I can have a personalized experience
     I want to be able to log in to the site
 
-    # Scenario: bad access
-    #   Given I am on the homepage
-    #   And I am not logged in
-    #   When I try to access my goals
-    #   Then I should see the homepage
-    #   And I should see the login button
-
-    Scenario: login
-      Given I am on the homepage
-      Then I should see "Welcome to trackr"
-      When I follow "Login"
-      And facebook authorizes me
-      Then I should see "Welcome, "
+    Background:
+      Given the following goals exist:
+        | goal                  |
+        | 0                     |
+        | 0                     |
+        | 0                     |
+        | 0                     |
+        | 0                     |
+    
+    @omniauth_test
+    Scenario: a user can login to facebook
+      Given I am signed in with provider "facebook"
+      Then I should see "facebookuser"
       
-    # Scenario: Checking login status
-    #   Given I am signed in and on the homepage
-    #   Then I should see "Welcome, user!"
-
-    # Scenario: logout
-    #   Given I am on the homepage
-    #   Then I should see the logout button
-    #   # When I follow the logout button
-    #   Then I should be on the homepage
+    
+    @omniauth_test
+    Scenario: a user logs out
+      Given I am signed in with provider "facebook"
+      And I should see "facebookuser"
+      And I follow "Log Out"
+      Then I should see "Login"
+      

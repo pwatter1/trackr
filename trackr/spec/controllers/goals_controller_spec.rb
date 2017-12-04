@@ -37,6 +37,7 @@ describe GoalsController, type: :controller do
     end
     
     it 'should use first record with value 0' do
+     
       expect(Goal.find(Goal.count).goal).to eql(0)
     end    
     
@@ -47,23 +48,28 @@ describe GoalsController, type: :controller do
   
   describe 'PUT #update' do
     describe 'When updating the users goal,' do
-      #let!(:goal) { FactoryGirl.create(:goal) }
-      let!(:fid) {"4"}
-      let!(:params) {"150"}
-      let!(:goals) {double("goals", :goal => "0")}
-      let!(:updated){double("updatedGoal", :goal => "150")}
+      let!(:goal) { FactoryGirl.create(:goal) }
+      #let!(:fid) {"4"}
+      let!(:params) {150}
+      #let!(:goal) {double("goals", :goal => "0")}
+      #let!(:updated){double("updatedGoal", :goal => "150")}
+      byebug
       it 'renders the edit template' do
-        get :edit, id: fid
+        get :edit, id: Goal.count
         
         # expect(response).to render_template('edit')
         response.should redirect_to '/' # ?
       end
       
       it "it uses controller update method with new value as parameter" do
-        allow(Goal).to receive(:find).with(fid).and_return(goals)
-        expect(goals).to receive(:update_attributes!).with(params).and_return(updated)
+        #allow(Goal).to receive(:find).with(Goal.count).and_return(goal)
+        #expect(goal).to receive(:update_attributes!).with(params).and_return(updated)
         
-        put :update, id: fid, goals: params     
+        byebug
+        put :update, :id => Goal.count, :goal => 150
+        #put :update, id: Goal.count, goal: 150
+        byebug
+        expect(Goal.find(Goal.count).goal).to eql(150)
         
         #FactoryGirl.attributes_for(:goal, goal: 150)
         #expect(flash[:notice]).to be_present

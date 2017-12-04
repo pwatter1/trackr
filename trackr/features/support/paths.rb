@@ -20,7 +20,7 @@ module NavigationHelpers
       goals_path
       
     when /^the Edit Goal Page$/
-      edit_goal_path(1)
+      edit_goal_path(5)
       
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

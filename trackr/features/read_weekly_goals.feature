@@ -6,9 +6,15 @@ Feature: read weekly goals
 Background: goal has been added to data base
 
   Given the following goals exist:
-  | goal                  |
-  | 0                     |
+        | goal                  |
+        | 0                     |
+        | 0                     |
+        | 0                     |
+        | 0                     |
+        | 0                     |
     
+@omniauth_test  
 Scenario: read weekly goals
-    Given I am on the dashboard page
+    Given I am signed in with provider "facebook"
+    And I am on the dashboard page
     Then I should see "Your weekly goal is 0 miles."
