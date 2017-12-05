@@ -10,7 +10,7 @@ class RunninglogsController < ApplicationController
     end
     
     def edit #new
-        @runninglog = @current_user.runninglogs.create!(:title => "hi", :text => params[:text])
+        @runninglog = @current_user.runninglogs.create!(:title => params[:title], :text => params[:text])
         flash[:notice] = "#{@runninglog.title} was successfully created."
         byebug
         redirect_to runninglog_path
