@@ -15,7 +15,7 @@ class GoalsController < ApplicationController
     
     def destroy
         @goal = Goal.find(session[:user_id])
-        @goal.goal = 0
+        @goal.update_attributes!(0)
         @goal.save! 
         redirect_to goals_path
     end

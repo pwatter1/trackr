@@ -1,4 +1,6 @@
 class Trackruser < ActiveRecord::Base
+    has_many :runninglogs
+    
     def self.from_omniauth(auth)
         where(provider: auth.provider, uid: auth.uid).first_or_initialize.tap do |user|
           Goal.create!({:goal => 0})
@@ -7,6 +9,7 @@ class Trackruser < ActiveRecord::Base
           user.name = auth.info.name
           user.oauth_token = auth.credentials.token
           user.oauth_expires_at = Time.at(auth.credentials.expires_at)
+          user.runninglog_id = auth.uid # use same id
           user.save!
         end
     end

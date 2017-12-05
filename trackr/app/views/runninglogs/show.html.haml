@@ -1,0 +1,23 @@
+%h2 Listing Logs
+
+
+%table#logs
+  %thead
+    %tr
+      %th Title
+      %th Text
+      %th Updated Date
+  %tbody
+    - @runninglogs.each do |runninglog|
+      %tr
+        %td= runninglog.title 
+        %td= runninglog.text
+        %td= runninglog.updated_at
+        
+// - @runninglogs.each do |runninglog|
+//     %p Run Date:    Run Title:      Run Text:
+//     %p runninglog.updated_at
+//     //%p= link_to runninglog.updated_at, runninglog_index_path
+
+= link_to "Back", goals_path 
+= link_to "Create a Log", new_runninglog_path(@runninglogs)

@@ -8,6 +8,7 @@
         %h2 Welcome #{@current_user.name}! 
         %p Your weekly goal is #{@goal.goal} miles.
         
+        = link_to "Running Logs", runninglog_path(@current_user)
         = link_to "Edit Weekly Goal", edit_goal_path(@goal)
         = link_to "Log Out", logout_path, :method  => :post
 

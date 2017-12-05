@@ -11,12 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171116223109) do
+ActiveRecord::Schema.define(version: 20171205224818) do
 
   create_table "goals", force: :cascade do |t|
     t.integer  "goal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "runninglogs", force: :cascade do |t|
+    t.string   "title"
+    t.text     "text"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "trackruser_id"
   end
 
   create_table "trackrusers", force: :cascade do |t|
@@ -27,6 +35,9 @@ ActiveRecord::Schema.define(version: 20171116223109) do
     t.datetime "oauth_expires_at"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.string   "runninglog_id"
   end
+
+  add_index "trackrusers", ["runninglog_id"], name: "index_trackrusers_on_runninglog_id"
 
 end

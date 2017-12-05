@@ -1,0 +1,14 @@
+%h2 New Running Log
+
+%form
+  = label :runninglog, :title, "Title"
+  = text_field :runninglog, :title
+  = label :runninglog, :text
+  = text_field :runninglog, :text
+  = link_to "Submit", edit_runninglog_path(:title, :text)
+
+
+//- form_tag new_runninglog_path(@runninglogs) do
+//   = text_field_tag 'Title', size: 75
+//   = text_field_tag 'Text', size: 250
+//   = link_to "Submit", runninglog_path(@current_user)

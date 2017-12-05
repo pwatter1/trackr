@@ -29,6 +29,7 @@ describe GoalsController, type: :controller do
   
   describe 'GET #new' do
     let!(:goal) {FactoryGirl.create(:goal)}
+    
 
     it 'should render the new template' do
       get :new
@@ -53,7 +54,7 @@ describe GoalsController, type: :controller do
       let!(:params) {150}
       #let!(:goal) {double("goals", :goal => "0")}
       #let!(:updated){double("updatedGoal", :goal => "150")}
-      byebug
+
       it 'renders the edit template' do
         get :edit, id: Goal.count
         
@@ -64,11 +65,8 @@ describe GoalsController, type: :controller do
       it "it uses controller update method with new value as parameter" do
         #allow(Goal).to receive(:find).with(Goal.count).and_return(goal)
         #expect(goal).to receive(:update_attributes!).with(params).and_return(updated)
-        
-        byebug
         put :update, :id => Goal.count, :goal => 150
         #put :update, id: Goal.count, goal: 150
-        byebug
         expect(Goal.find(Goal.count).goal).to eql(150)
         
         #FactoryGirl.attributes_for(:goal, goal: 150)

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do  
   resources :goals
+  resources :runninglogs
+  resources :runninglog
 
   root "pages#index" 
   
@@ -8,5 +10,6 @@ Rails.application.routes.draw do
   post 'logout' => 'sessions#destroy'
   get 'auth/failure' => 'sessions#failure'
   get 'auth/facebook', :as => 'login'
+  get "runninglog", to: "runninglogs#show"
   
 end
