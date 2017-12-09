@@ -1,23 +1,15 @@
-%h2 Listing Logs
+%h2 Details about #{@runninglog.title}
 
+%h3 Distance:
+%p#distance= @runninglog.miles
 
-%table#logs
-  %thead
-    %tr
-      %th Title
-      %th Text
-      %th Updated Date
-  %tbody
-    - @runninglogs.each do |runninglog|
-      %tr
-        %td= runninglog.title 
-        %td= runninglog.text
-        %td= runninglog.updated_at
-        
-// - @runninglogs.each do |runninglog|
-//     %p Run Date:    Run Title:      Run Text:
-//     %p runninglog.updated_at
-//     //%p= link_to runninglog.updated_at, runninglog_index_path
+%h3 Run Date:
+%p#rundate= @runninglog.rundate.strftime("%B %d, %Y")
 
-= link_to "Back", goals_path 
-= link_to "Create a Log", new_runninglog_path(@runninglogs)
+%h3 Description:
+%p#description= @runninglog.text
+%br
+
+= link_to "Back", runninglogs_path 
+= link_to 'Edit', edit_runninglog_path(@runninglog)
+= link_to 'Delete', runninglog_path(@runninglog), :method => :delete

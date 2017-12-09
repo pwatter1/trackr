@@ -1,0 +1,19 @@
+%h2 Listing Logs
+
+%table#logs
+  %thead
+    %tr
+      %th Title              
+      %th Distance (Miles)
+      %th Run Date
+      %th Link
+  %tbody
+    - @runninglogs.each do |runninglog|
+      %tr
+        %td= runninglog.title 
+        %td= runninglog.miles
+        %td= runninglog.rundate.try(:strftime, ("%B %e, %Y"))
+        %td= link_to "More about #{runninglog.title}", runninglog_path(runninglog)
+
+= link_to "Back", goals_path 
+= link_to "Create a Log", new_runninglog_path

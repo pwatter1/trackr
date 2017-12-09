@@ -20,8 +20,20 @@ module NavigationHelpers
       goals_path
       
     when /^the Edit Goal Page$/
-      edit_goal_path(5)
+      edit_goal_path(1)
       
+    when /^the runninglog page$/
+      runninglogs_path
+    
+    when /^the Create Log Page$/ 
+      new_runninglog_path
+    
+    when /^the Log Page$/
+      runninglog_path(7)
+    
+    when /^the Edit Log Page$/
+      edit_runninglog_path(7)
+  
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

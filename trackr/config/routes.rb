@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get 'auth/failure' => 'sessions#failure'
   get 'auth/facebook', :as => 'login'
   get "runninglog", to: "runninglogs#show"
+  get 'single_show_runninglog', to: "runninglogs#single_show_runninglog"
   
 end

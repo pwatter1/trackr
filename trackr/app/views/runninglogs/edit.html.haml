@@ -1,6 +1,9 @@
-%h2 New Running Log
+-# edit.html.haml using partial
 
-= form_tag runninglogs_path, :method => :post do
+%h1 Edit Run: #{@runninglog.title}
+
+= form_tag runninglog_path(@runninglog), :method => :put do
+
   = label :runninglog, :title, "Title"
   = text_field :runninglog, :title
   \
@@ -10,8 +13,7 @@
   = label :runninglog, :miles, "Distance"
   = number_field :runninglog, :miles
   \
-  = label :runninglog, :rundate, "Run Date"
+  = label :runninglog, :rundate, "Date of Run"
   = date_field :runninglog, :rundate
-  
-  = submit_tag 'Save Changes'
-  
+
+  = submit_tag 'Update Running Log'
