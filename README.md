@@ -5,6 +5,20 @@
 ### Owners: Ahnaf Raihan, Margie Lehmann, Patrick Watters, Thomas Moshier
 ### Requester: Rose Williams
 
+### Where we're at
+We have completed 5 iterations as of the end of Binghamton's fall 2017 semester. We have created the baseline app, created the models and databases neccessary, oauth authentication through Facebook with session control, then we implemented the CRUD for connecting weekly mileage goals with the user. Finally, we connected individual users with their own running logs and the CRUD associated with it. 
+
+### Plans for future
+Additional features for the running log. Social media integration. Make it a bit prettier!
+
+### To run the server
+Clone the repo and run the server with the command with "rails s -p $PORT -b $IP"
+Run rspec with "rspec" - TDD
+Run cucumber with "cucumber" - BDD
+
+### How to contribute
+Clone this parent directory into a new Cloud9 workspace. Develop, submit any issues, and then commit a pull request. We'll review it and hopefully you'll be a direct contributor to this project!
+
 ### Pitch
 Nobody wants obstacles in their way when they go on a run. So why not have an app to match?
 Trackr is a running application that goes beyond the basic functionalities of a running log. 
