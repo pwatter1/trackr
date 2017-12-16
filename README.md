@@ -11,8 +11,8 @@ We have completed 4 iterations and half of another as of the end of Binghamton's
 ### How to contribute
 Clone this parent directory into a new Cloud9 workspace. Develop, submit any issues, and then commit a pull request. We'll review it and hopefully you'll be a direct contributor to this project!
 
-### Plans for future
-Additional features for the running log. <br /> Social media integration. <br /> Make it a bit prettier with CSS or an explicit theme like Bootstrap!
+### Plans for the future
+Additional features for the running log. Make it a more comprehensive app. <br /> Social media integration. Share your runs/goals on Twitter or Facebook. <br /> Make it a bit prettier with CSS or an explicit theme like Bootstrap!
 
 ### To run the server
 Clone the repo and run the server with the command with "rails s -p $PORT -b $IP". <br />
