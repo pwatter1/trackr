@@ -15,8 +15,8 @@ Clone this parent directory into a new Cloud9 workspace. Develop, submit any iss
 Additional features for the running log. Social media integration. Make it a bit prettier!
 
 ### To run the server
-Clone the repo and run the server with the command with "rails s -p $PORT -b $IP".__
-Run rspec with "rspec" - TDD.__
+Clone the repo and run the server with the command with "rails s -p $PORT -b $IP". <br />
+Run rspec with "rspec" - TDD. <br />
 Run cucumber with "cucumber" - BDD.
 
 ### Pitch
