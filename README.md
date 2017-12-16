@@ -6,6 +6,9 @@
 ## Owners: Ahnaf Raihan, Margie Lehmann, Patrick Watters, Thomas Moshier
 ## Requester: Rose Williams
 
+## Technologies 
+Ruby on Rails, HTML, CSS, Rspec (TDD Testing), Cucumber (BDD Testing), Heroku
+
 ### Where we're at
 We have completed 4 iterations and half of another as of the end of Binghamton's fall 2017 semester. We have created the baseline app, created the models and databases neccessary, oauth authentication through Facebook with session control, then we implemented the CRUD for connecting weekly mileage goals with the user. Finally, we connected individual users with their own running logs and the CRUD associated with it. 
 
